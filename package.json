@@ -1,0 +1,28 @@
+{
+  "name": "rtx_checker_v2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "local": "env-cmd -f .env node local.js",
+    "imap": "env-cmd -f .env node imapTest.js",
+    "server": "env-cmd -f .env.server node cron.js",
+    "package": "zip -r ../\"rtx_package_$(date +%Y%m%d%s)\".zip . -x \".git/*\" -x \".env\""
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "await-to-js": "^2.1.1",
+    "chrome-aws-lambda": "^5.5.0",
+    "cron": "1.8.2",
+    "env-cmd": "10.1.0",
+    "imap": "^0.8.19",
+    "mailparser": "3.2.0",
+    "puppeteer-core": "5.5.0",
+    "puppeteer-extra": "3.1.16",
+    "puppeteer-extra-plugin-adblocker": "^2.11.11",
+    "puppeteer-extra-plugin-recaptcha": "3.3.1",
+    "puppeteer-extra-plugin-stealth": "2.6.6",
+    "telegram-bot-api": "^2.0.1"
+  }
+}
